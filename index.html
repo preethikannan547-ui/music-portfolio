@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preethi Kannan | Music Teacher</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+        <h2>🎵 Preethi Kannan</h2>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+
+        <div class="hero-text">
+            <h1>Music Beyond Notes</h1>
+
+            <p>
+                Carnatic Vocal • Veena • Carnatic Keyboard • Western Keyboard
+            </p>
+
+            <a href="#contact" class="btn">Join Classes</a>
+        </div>
+
+        <img src="images/WhatsApp%20Image%202026-07-01%20at%2016.55.07.jpeg" alt="Preethi Kannan teaching music">
+
+    </div>
+
+</header>
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="about-container">
+
+        <img src="images/WhatsApp%20Image%202026-07-01%20at%2016.56.50.jpeg" alt="Preethi Kannan with students">
+
+        <div>
+
+            <p>
+                Hello! I'm **Preethi Kannan**, a Carnatic music educator, performer, and keyboardist with a lifelong passion for Indian classical music. I began learning Carnatic Keyboard and Vocal at the age of five under the guidance of **Smt. Ranganayaki Gopalan** and **Smt. Shylu Ravindran**, and have been performing on stage since I was ten. Over the years, I have had the privilege of performing alongside renowned maestros and teaching over 50 students in Carnatic Keyboard, Vocal, and Veena through both online and offline classes. My goal is to inspire a love for music while helping every student build a strong foundation, confidence, and performance skills through personalized guidance and practical stage experience.
+
+            </p>           
+
+            <p>
+                I teach:
+            </p>
+
+            <ul>
+                <li>🎹 Carnatic Keyboard</li>
+                <li>🎼 Western Keyboard</li>
+                <li>🎤 Carnatic Vocal</li>
+                <li>🎻 Veena</li>
+            </ul>
+
+            <p>
+                I Speak:
+            </p>
+
+            <ul>
+                <li>Tamil</li>
+                <li>Telugu</li>
+                <li>English</li>               
+            </ul>
+
+            <p>
+                My goal is to make learning music enjoyable while building
+                strong fundamentals and confidence in every student.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="videos">
+
+    <h2>Performance & Class Videos</h2>
+
+    <div class="video-grid">
+
+        <video controls preload="metadata" playsinline >
+            <source src="videos/WhatsApp%20Video%202026-07-01%20at%2016.50.46.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <video controls preload="metadata" playsinline >
+            <source src="videos/WhatsApp%20Video%202026-07-01%20at%2016.51.38.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <video controls preload="metadata" playsinline >
+            <source src="videos/WhatsApp%20Video%202026-07-01%20at%2017.11.04.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    </div>
+
+</section>
+
+<section id="gallery">
+
+    <h2>Photo Gallery</h2>
+
+    <div class="gallery-grid" id="photoGallery"></div>
+
+</section>
+
+<section id="contact">
+
+    <h2>Contact</h2>
+
+    <div class="contact-box">
+
+        <p>📞 <strong>Phone:</strong> 9384853301</p>
+
+        <p>📍 Chennai ,Tamil Nadu, INDIA</p>
+
+        <p>
+            Classes Available:
+            <br><br>
+
+            ✓ Carnatic Vocal<br>
+            ✓ Veena<br>
+            ✓ Carnatic Keyboard<br>
+            ✓ Western Keyboard
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 Preethi Kannan | Music Teacher
+    </p>
+
+</footer>
+
+<script>
+const photos = [
+    "images/WhatsApp%20Image%202026-07-01%20at%2016.55.07.jpeg",
+    "images/WhatsApp%20Image%202026-07-01%20at%2016.56.50.jpeg",
+    "images/WhatsApp%20Image%202026-07-01%20at%2016.57.00.jpeg"
+];
+
+const gallery = document.getElementById("photoGallery");
+const layoutClasses = ["wide", "tall", "square"];
+
+photos.forEach((src, index) => {
+    const item = document.createElement("div");
+    item.className = `gallery-item ${layoutClasses[index % layoutClasses.length]}`;
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = `Photo ${index + 1}`;
+    img.loading = "lazy";
+
+    item.appendChild(img);
+    gallery.appendChild(item);
+});
+</script>
+
+</body>
+</html>
